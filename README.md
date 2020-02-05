@@ -1,6 +1,10 @@
 # desafio
 Desafio Técnico SoftPlan
 
+Projeto para cumprir o desafio: https://github.com/softplan/softplayer-java-apply
+
+O mesmo foi implementado usando spring boot+react e h2db
+
 
 Passos para rodar o projeto:
 
