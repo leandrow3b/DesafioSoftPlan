@@ -10,6 +10,6 @@ public class SourceController {
 
 	@RequestMapping(method=RequestMethod.GET)
 	public String source () {
-		return "https://github.com/leandrow3b/DesafioTecnico";
+		return "https://github.com/leandrow3b/DesafioSoftPlan";
 	}
 }
