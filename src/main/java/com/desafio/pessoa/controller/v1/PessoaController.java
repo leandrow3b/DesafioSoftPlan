@@ -45,7 +45,7 @@ public class PessoaController {
         return new ResponseEntity<Object>(mapperFacade.map(
         		pessoaService.save(pessoa), PessoaCriadaDTO.class), HttpStatus.CREATED);
     }
-	
+	@ApiOperation(value = "Operação responsavel por remover uma pessoa")
 	@RequestMapping(value = "/pessoa/{id}", method = RequestMethod.DELETE)
     public ResponseEntity<Object> remove(@PathVariable(value = "id") long id) {
       
@@ -60,6 +60,7 @@ public class PessoaController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 	
+	@ApiOperation(value = "Operação responsavel por listar uma pessoa")
 	@RequestMapping(value = "/pessoa", method = RequestMethod.GET)
 	public List<Pessoa> list() {
 		return pessoaService.findAll();
@@ -77,6 +78,7 @@ public class PessoaController {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
     }
 	
+	@ApiOperation(value = "Operação responsavel por atualizar uma pessoa")
 	@RequestMapping(value = "/pessoa/{id}", method =  RequestMethod.PUT)
     public ResponseEntity<Pessoa> update(@PathVariable(value = "id") long id,
     		@Valid @RequestBody Pessoa newPessoa){
